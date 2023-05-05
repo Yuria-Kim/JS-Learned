@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*목적지 까지의 대중교통 안내 프로그램을 만들어보자
+    목적지까지의 거리 받기. 
+    1km 이내 = 도보, 5km 이내 = 택시, 5km 이상의 경우 교통비 예산을 체크하여 버스 or 택시 추천*/
+
+    let distance = Number(prompt('목적지까지의 거리를 알려주세요.(단위:km)'));
+
+    if (distance <= 1){
+      alert('건강을 위해 걸어가 보는건 어떨까요?');
+    }
+    else if (distance <5){
+      alert('빠른 이동을 위해 택시를 타는 것도 나쁘지 않겠네요');
+    }
+    else if (distance > 5){
+      move_long();
+    }
+
+    /* 함수를 만들어보자 ▼
+    5km 이상의 경우 금액 체크 후 교통수단 안내 함수*/
+
+    function move_long(){
+      let money = Number(prompt('교통비로 사용할수 있는 금액이 얼마입니까?'));
+      if (money >= 5000) {
+        let massage = alert('택시가 더 나은 선택으로 보입니다.');
+      }
+      else {
+        let massage = alert('버스가 현명합니다.');
+      }
+      return message;
+    }
+
+  </script>
+</body>
+</html>
