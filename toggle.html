@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starcraft</title>
+
+</head>
+<body>
+  <img id = "cloaking" src="cloaking.png" alt="cloaking">
+  <img id = "wraith" src="wraith.png" alt="wraith">
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <script>
+    // jquery toggle
+    $(document).ready(function(){ // $ => 무언가를 선택하는 jquery 문법
+      $("#cloaking").click(function(){ // # => id로 불러올때 
+        $("#wraith").toggle();
+      });
+    });
+    
+    // jquery fadeout toggle
+    $("#cloaking").click(function(){ 
+      $("#wraith").fadeToggle("slow", "linear"); // 함수쓸때 대소문자 주의!!
+    });
+        
+  </script>
+
+</body>
+</html>
